@@ -1,6 +1,6 @@
 # Implementation notes
 
-Completed and refined on September 13, 2026, on branch `codex/landing-page`.
+Completed and refined on September 13, 2026, on branch `codex/landing-page`, then fast-forwarded to `main` for GitHub Pages publication.
 
 The page uses plain HTML, CSS, and a dependency-free JavaScript IIFE. Every original page section was implemented and committed in specification order: header, hero, products, brands, benefits, industry, learning, contact, and footer. SEO/deployment, verification corrections, and the subsequent visual refinements have separate conventional commits. There is no build step, package manifest, runtime npm dependency, or application analytics.
 
@@ -37,7 +37,19 @@ Additional final checks: `file://` opening, no-JavaScript navigation and contact
 - Header anchor offsets include the border: 89px desktop and 65px mobile. Map content heights remain 440px desktop and 200px mobile, plus borders.
 - The Google Fonts stylesheet loads without blocking the initial render; critical Oswald is preloaded. A `noscript` stylesheet supplies fonts without JavaScript. Required families, weights, and fallbacks remain.
 - Two narrowly scoped HTML-validator suppressions preserve specification copy: `long-title` for the exact title, and `tel-non-breaking` for literal telephone hyphens. All other recommended rules remain enabled.
-- Deployment allowlists site files so design sources and notes are excluded. The image pass reapplies immutable cache metadata even if image bytes are unchanged. No AWS deployment was performed. Canonical and custom-domain configuration remain TODOs until the domain is known.
+- The optional AWS deployment allowlists site files so design sources and notes are excluded. Its image pass reapplies immutable cache metadata even if image bytes are unchanged. No AWS deployment was performed. The subsequent GitHub Pages publication supplies the canonical URL; custom-domain configuration remains optional.
+
+## GitHub Pages publication
+
+Published September 13, 2026, at the user's explicit request:
+
+- Public repository: [vzladude/acc-landing](https://github.com/vzladude/acc-landing), default branch `main`.
+- Live site: [https://vzladude.github.io/acc-landing/](https://vzladude.github.io/acc-landing/), HTTPS enforced.
+- [First successful deployment](https://github.com/vzladude/acc-landing/actions/runs/34764485244): site commit `5cf299e8f9d49be7d723fb728d16852c71b5e0a7`, completed at 15:04:27 UTC.
+- `.github/workflows/pages.yml` publishes site changes pushed to `main` and supports manual dispatch. The workflow packages only the static site files and uses official GitHub actions pinned to verified release commit SHAs. Documentation-only changes do not trigger another deployment.
+- Canonical, Open Graph URL, JSON-LD URL, and absolute social-image metadata point to the public Pages address. Runtime assets retain relative paths for the project subdirectory and local previews.
+- Post-deployment verification: the public URL returned HTTP 200; all 22 hosted files matched their local bytes; design/specification/implementation documents correctly returned 404 on Pages. The public page was opened and visually verified in the browser, including loaded contained hero imagery, the canonical URL, and no horizontal overflow at the current 556px viewport.
+- HTML validation, JavaScript syntax, Bash syntax, workflow YAML parsing, and whitespace checks passed before publication. Deployment evidence is saved in `/tmp/acc-landing-qa/artifacts/github-pages-verification.json`.
 
 ## Verification artifacts and history
 
