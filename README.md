@@ -19,7 +19,17 @@ Visit `http://localhost:8000`. Google Fonts and the embedded Google map require 
 - **Motion:** below-fold blocks reveal once using IntersectionObserver; buttons, cards, links, and the mobile menu have restrained transitions. CSS timing lives at the end of `css/styles.css`, and reveal groups are at the end of `js/main.js`. Initial content remains visible, keyboard focus reveals its container immediately, and `prefers-reduced-motion` disables movement. Without JavaScript or IntersectionObserver, all content stays visible.
 - **WhatsApp:** edit the number and messages in the `CONFIG` object at the top of `js/main.js`. Update the static `data-whatsapp` link URLs in `index.html` as well, so the no-JavaScript fallback agrees. Use country-code digits only, without a plus sign. Keep displayed phone numbers, `tel:` links, and JSON-LD consistent.
 - **Instagram and map:** update `CONFIG.instagramUrl` / `CONFIG.mapsQuery` and the corresponding static HTML fallbacks. Update JSON-LD `sameAs` when Instagram changes.
-- **Domain:** complete the canonical TODO and add `og:url` once the public domain is known. Social-image paths are relative as specified; use the final fully qualified image URL if your sharing platform requires it.
+- **Domain:** the canonical URL, `og:url`, JSON-LD URL, and absolute social-image URLs use the GitHub Pages address. Update these together if you connect a custom domain. Runtime asset paths remain relative so both local previews and the `/acc-landing/` project path work.
+
+## GitHub Pages
+
+- Public repository: [vzladude/acc-landing](https://github.com/vzladude/acc-landing).
+- Website: [vzladude.github.io/acc-landing](https://vzladude.github.io/acc-landing/).
+- Source branch: `main`; publishing source: GitHub Actions; HTTPS enabled.
+
+The workflow in `.github/workflows/pages.yml` deploys automatically when site files change on `main`. After committing an update, run `git push origin main`. You can also run **Deploy to GitHub Pages** manually from the repository's Actions tab.
+
+The workflow packages only `index.html`, `css/`, `js/`, `img/`, `favicon.svg`, and `robots.txt`. Repository documentation and design references remain in GitHub but are not included in the hosted website. Official GitHub actions are pinned to commit SHAs. Deployment uses the repository's short-lived `GITHUB_TOKEN` and Pages OIDC integration, without additional credentials or a build step.
 
 ## Deploy to S3 and CloudFront
 
@@ -37,7 +47,7 @@ CLOUDFRONT_DISTRIBUTION_ID=your-distribution-id \
 
 The script fails before deployment if either variable is missing. It syncs the deployable files, deletes stale files within the included paths, applies five-minute caching to HTML/CSS/JS (also the favicon and robots file), uploads images with one-year immutable caching, and invalidates `/*`. Images are copied each time so cache metadata is correct even when their bytes have not changed. It excludes Git, the design, documentation, source briefs, and local validation artifacts through an allowlist. Use a dedicated bucket because `--delete` removes stale deployed files.
 
-**TODO — custom domain:** create a Route 53 hosted zone, request and validate an ACM certificate in **us-east-1**, attach the certificate and alternate domain name to CloudFront, and create Route 53 A/AAAA alias records targeting the distribution. Then complete the canonical metadata in `index.html`.
+**TODO — custom domain for the optional AWS deployment:** create a Route 53 hosted zone, request and validate an ACM certificate in **us-east-1**, attach the certificate and alternate domain name to CloudFront, and create Route 53 A/AAAA alias records targeting the distribution. Then update the canonical and social metadata in `index.html` to that domain. The active deployment uses GitHub Pages.
 
 ## Validate
 
