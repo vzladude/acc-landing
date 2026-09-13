@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Poppins:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<helmet>
+<title>ACC Landing A — design reference</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<style>
+body{margin:0;background:#D8D4CF;font-family:Poppins,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#FE6102;text-decoration:none}a:hover{color:#FF7E07}
+</style>
+
+<section style="padding:48px 64px 120px;display:flex;flex-direction:column;gap:32px">
+  <div style="display:flex;align-items:baseline;gap:24px;font-family:Poppins;color:#3a3633">
+    <div style="font-family:Oswald;font-weight:700;font-size:28px;text-transform:uppercase">Prototipo A — <span style="color:#FE6102">Tablero oscuro</span></div>
+    <div style="font-size:13px;color:#6b6560">Fondo negro dominante · fotos a sangre · diagonales naranjas</div>
+    <div style="margin-left:auto;display:flex;gap:16px;font-size:13px;font-weight:500;flex:none;white-space:nowrap"></div>
+  </div>
+  <div style="display:flex;gap:64px;align-items:flex-start">
+
+    <!-- ================= A-DESKTOP ================= -->
+    <div id="A-desktop" style="display:flex;flex-direction:column;gap:12px;flex:none">
+      <div style="font-family:ui-monospace,Menlo,monospace;font-size:12px;color:#6b6560;display:flex;gap:10px;align-items:center"><span style="background:#0C0B0B;color:#FE6102;padding:3px 8px;font-weight:600">A-desktop</span>1440 × auto</div>
+      <div data-screen-label="A-desktop" style="width:1440px;background:#0C0B0B;color:#fff;font-family:Poppins,sans-serif;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.25)">
+
+        <!-- nav -->
+        <div style="height:88px;padding:0 120px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.08);position:relative;z-index:2">
+          <div style="display:flex;flex-direction:column;align-items:center;line-height:1">
+            <div style="position:relative;font-family:Oswald;font-weight:700;font-size:40px;color:#FE6102;letter-spacing:-0.04em;line-height:1">ACC<div style="position:absolute;left:0;right:0;top:47%;height:3px;background:#0C0B0B"></div></div>
+            <div style="font-size:8px;font-weight:600;letter-spacing:0.42em;color:#fff;margin-top:3px">INVERSIONES</div>
+          </div>
+          <div style="display:flex;gap:36px;font-size:14px;font-weight:500;color:rgba(255,255,255,.85)">
+            <a href="#" style="color:inherit">Productos</a><a href="#" style="color:inherit">Marcas</a><a href="#" style="color:inherit">Por qué ACC</a><a href="#" style="color:inherit">Aprende</a><a href="#" style="color:inherit">Contacto</a>
+          </div>
+          <a href="#" style="background:#FE6102;color:#0C0B0B;font-weight:600;font-size:14px;padding:12px 22px;border-radius:4px">Cotiza por WhatsApp</a>
+        </div>
+
+        <!-- hero -->
+        <div style="position:relative;height:800px;overflow:hidden">
+          <img src="../img/tablero-control.jpg" alt="Tablero eléctrico industrial" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 0%">
+          <div style="position:absolute;inset:0;background:linear-gradient(90deg,#0C0B0B 0%,rgba(12,11,11,.78) 38%,rgba(12,11,11,.1) 100%)"></div>
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,11,11,.45) 0%,rgba(12,11,11,0) 25%,rgba(12,11,11,0) 70%,#0C0B0B 100%)"></div>
+          <div style="position:absolute;left:120px;bottom:110px;max-width:980px;display:flex;flex-direction:column;gap:28px">
+            <div style="font-size:13px;font-weight:600;letter-spacing:0.24em;color:#FE6102;text-transform:uppercase">Suministros eléctricos industriales · Valencia</div>
+            <h1 style="margin:0;font-family:Oswald;font-weight:700;font-size:132px;line-height:0.92;text-transform:uppercase;letter-spacing:-0.01em">Maximizamos la <span style="color:#FE6102">continuidad</span> de tu planta</h1>
+            <p style="margin:0;font-style:italic;font-size:21px;line-height:1.5;color:rgba(255,255,255,.82);max-width:640px">Suministros eléctricos y automatización industrial con stock en Valencia. Cotiza hoy y recibe asesoría técnica.</p>
+            <div style="display:flex;gap:16px;margin-top:8px">
+              <a href="#" style="background:#FE6102;color:#0C0B0B;font-weight:600;font-size:16px;padding:18px 32px;border-radius:4px;text-transform:uppercase;letter-spacing:0.04em">Cotiza por WhatsApp</a>
+              <a href="#" style="border:2px solid #fff;color:#fff;font-weight:600;font-size:16px;padding:16px 32px;border-radius:4px;text-transform:uppercase;letter-spacing:0.04em">Ver productos</a>
+            </div>
+          </div>
+          <div style="position:absolute;right:0;bottom:0;width:300px;height:300px;background:#FE6102;clip-path:polygon(100% 0,100% 100%,0 100%)"></div>
+        </div>
+
+        <!-- productos -->
+        <div style="padding:120px 120px 100px;display:flex;flex-direction:column;gap:56px">
+          <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:40px">
+            <h2 style="margin:0;font-family:Oswald;font-weight:700;font-size:72px;line-height:1;text-transform:uppercase">Productos <span style="color:#FE6102">con stock</span></h2>
+            <p style="margin:0;font-style:italic;font-size:17px;color:rgba(255,255,255,.7);max-width:380px;line-height:1.5">Cuatro categorías para proteger, controlar, medir y automatizar tu proceso.</p>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px">
+            
+              <div style="background:#161514;border:1px solid rgba(255,255,255,.08);position:relative;overflow:hidden;display:flex;flex-direction:column">
+                <div style="height:250px;overflow:hidden;background:#E9E5E1;position:relative"><img src="../img/breaker-caja-moldeada.jpg" alt="Protección eléctrica" style="width:100%;height:100%;object-fit:cover;transform:scale(1.15);transform-origin:50% 60%"></div>
+                <div style="position:absolute;top:0;left:0;width:64px;height:64px;background:#FE6102;clip-path:polygon(0 0,100% 0,0 100%)"></div>
+                <div style="padding:28px 24px 24px;display:flex;flex-direction:column;gap:12px;flex:1">
+                  <div style="font-family:Oswald;font-weight:700;font-size:26px;line-height:1.05;text-transform:uppercase">Protección eléctrica</div>
+                  <div style="font-size:14px;line-height:1.55;color:rgba(255,255,255,.62);flex:1">Breakers, interruptores de caja moldeada.</div>
+                  <a href="#" style="border:2px solid #FE6102;color:#FE6102;font-weight:600;font-size:14px;padding:12px;text-align:center;border-radius:4px;text-transform:uppercase;letter-spacing:0.04em;margin-top:8px">Cotizar</a>
+                </div>
+              </div>
+            
+              <div style="background:#161514;border:1px solid rgba(255,255,255,.08);position:relative;overflow:hidden;display:flex;flex-direction:column">
+                <div style="height:250px;overflow:hidden;background:#E9E5E1;position:relative"><img src="../img/contactor.jpg" alt="Control de motores" style="width:100%;height:100%;object-fit:cover;transform:scale(1.9);transform-origin:100% 45%"></div>
+                <div style="position:absolute;top:0;left:0;width:64px;height:64px;background:#FE6102;clip-path:polygon(0 0,100% 0,0 100%)"></div>
+                <div style="padding:28px 24px 24px;display:flex;flex-direction:column;gap:12px;flex:1">
+                  <div style="font-family:Oswald;font-weight:700;font-size:26px;line-height:1.05;text-transform:uppercase">Control de motores</div>
+                  <div style="font-size:14px;line-height:1.55;color:rgba(255,255,255,.62);flex:1">Contactores, relés térmicos, guardamotores.</div>
+                  <a href="#" style="border:2px solid #FE6102;color:#FE6102;font-weight:600;font-size:14px;padding:12px;text-align:center;border-radius:4px;text-transform:uppercase;letter-spacing:0.04em;margin-top:8px">Cotizar</a>
+                </div>
+              </div>
+            
+              <div style="background:#161514;border:1px solid rgba(255,255,255,.08);position:relative;overflow:hidden;display:flex;flex-direction:column">
+                <div style="height:250px;overflow:hidden;background:#E9E5E1;position:relative"><img src="../img/transmisor-presion.jpg" alt="Sensores e instrumentación" style="width:100%;height:100%;object-fit:cover;transform:scale(2.3);transform-origin:72% 100%"></div>
+                <div style="position:absolute;top:0;left:0;width:64px;height:64px;background:#FE6102;clip-path:polygon(0 0,100% 0,0 100%)"></div>
+                <div style="padding:28px 24px 24px;display:flex;flex-direction:column;gap:12px;flex:1">
+                  <div style="font-family:Oswald;font-weight:700;font-size:26px;line-height:1.05;text-transform:uppercase">Sensores e instrumentación</div>
+                  <div style="font-size:14px;line-height:1.55;color:rgba(255,255,255,.62);flex:1">Sensores SICK, transmisores de presión Danfoss.</div>
+                  <a href="#" style="border:2px solid #FE6102;color:#FE6102;font-weight:600;font-size:14px;padding:12px;text-align:center;border-radius:4px;text-transform:uppercase;letter-spacing:0.04em;margin-top:8px">Cotizar</a>
+                </div>
+              </div>
+            
+              <div style="background:#161514;border:1px solid rgba(255,255,255,.08);position:relative;overflow:hidden;display:flex;flex-direction:column">
+                <div style="height:250px;overflow:hidden;background:#E9E5E1;position:relative"><img src="../img/tablero-control.jpg" alt="Automatización" style="width:100%;height:100%;object-fit:cover;transform:scale(2.4);transform-origin:50% 0%"></div>
+                <div style="position:absolute;top:0;left:0;width:64px;height:64px;background:#FE6102;clip-path:polygon(0 0,100% 0,0 100%)"></div>
+                <div style="padding:28px 24px 24px;display:flex;flex-direction:column;gap:12px;flex:1">
+                  <div style="font-family:Oswald;font-weight:700;font-size:26px;line-height:1.05;text-transform:uppercase">Automatización</div>
+                  <div style="font-size:14px;line-height:1.55;color:rgba(255,255,255,.62);flex:1">PLC, HMI, variadores de frecuencia.</div>
+                  <a href="#" style="border:2px solid #FE6102;color:#FE6102;font-weight:600;font-size:14px;padding:12px;text-align:center;border-radius:4px;text-transform:uppercase;letter-spacing:0.04em;margin-top:8px">Cotizar</a>
+                </div>
+              </div>
+            
+          </div>
+        </div>
+
+        <!-- marcas -->
+        <div style="padding:56px 120px;border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:32px">
+          <div style="font-size:13px;font-weight:600;letter-spacing:0.24em;color:#FE6102;text-transform:uppercase">Marcas que representamos</div>
+          <div style="display:flex;justify-content:space-between;gap:24px">
+            
+              <div style="flex:1;height:84px;border:1px dashed rgba(255,255,255,.22);display:flex;align-items:center;justify-content:center;font-family:Oswald;font-weight:700;font-size:26px;letter-spacing:0.06em;text-transform:uppercase;color:rgba(255,255,255,.5)">Siemens</div>
+            
+              <div style="flex:1;height:84px;border:1px dashed rgba(255,255,255,.22);display:flex;align-items:center;justify-content:center;font-family:Oswald;font-weight:700;font-size:26px;letter-spacing:0.06em;text-transform:uppercase;color:rgba(255,255,255,.5)">Schneider Electric</div>
+            
+              <div style="flex:1;height:84px;border:1px dashed rgba(255,255,255,.22);display:flex;align-items:center;justify-content:center;font-family:Oswald;font-weight:700;font-size:26px;letter-spacing:0.06em;text-transform:uppercase;color:rgba(255,255,255,.5)">LS Electric</div>
+            
+              <div style="flex:1;height:84px;border:1px dashed rgba(255,255,255,.22);display:flex;align-items:center;justify-content:center;font-family:Oswald;font-weight:700;font-size:26px;letter-spacing:0.06em;text-transform:uppercase;color:rgba(255,255,255,.5)">SICK</div>
+            
+              <div style="flex:1;height:84px;border:1px dashed rgba(255,255,255,.22);display:flex;align-items:center;justify-content:center;font-family:Oswald;font-weight:700;font-size:26px;letter-spacing:0.06em;text-transform:uppercase;color:rgba(255,255,255,.5)">Danfoss</div>
+            
+          </div>
+        </div>
+
+        <!-- por qué -->
+        <div style="padding:120px;display:grid;grid-template-columns:1fr 1.4fr;gap:80px;position:relative">
+          <div style="display:flex;flex-direction:column;gap:24px">
+            <h2 style="margin:0;font-family:Oswald;font-weight:700;font-size:72px;line-height:1;text-transform:uppercase">¿Por qué <span style="color:#FE6102">ACC</span>?</h2>
+            <p style="margin:0;font-style:italic;font-size:17px;color:rgba(255,255,255,.7);line-height:1.5;max-width:360px">Lo que necesita tu planta para no detenerse.</p>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px 40px">
+            
+              <div style="display:flex;flex-direction:column;gap:12px;border-top:2px solid #FE6102;padding-top:20px">
+                <div style="font-family:Oswald;font-weight:700;font-size:44px;color:#FE6102;line-height:1">01</div>
+                <div style="font-family:Oswald;font-weight:700;font-size:26px;line-height:1.1;text-transform:uppercase">Stock local en Valencia</div>
+                <div style="font-size:15px;line-height:1.55;color:rgba(255,255,255,.62)">Componentes disponibles para entrega inmediata.</div>
+              </div>
+            
+              <div style="display:flex;flex-direction:column;gap:12px;border-top:2px solid #FE6102;padding-top:20px">
+                <div style="font-family:Oswald;font-weight:700;font-size:44px;color:#FE6102;line-height:1">02</div>
+                <div style="font-family:Oswald;font-weight:700;font-size:26px;line-height:1.1;text-transform:uppercase">Asesoría técnica</div>
+                <div style="font-size:15px;line-height:1.55;color:rgba(255,255,255,.62)">Te ayudamos a elegir el componente correcto.</div>
+              </div>
+            
+              <div style="display:flex;flex-direction:column;gap:12px;border-top:2px solid #FE6102;padding-top:20px">
+                <div style="font-family:Oswald;font-weight:700;font-size:44px;color:#FE6102;line-height:1">03</div>
+                <div style="font-family:Oswald;font-weight:700;font-size:26px;line-height:1.1;text-transform:uppercase">Entregas rápidas</div>
+                <div style="font-size:15px;line-height:1.55;color:rgba(255,255,255,.62)">Despachos en Valencia y envíos a todo el país.</div>
+              </div>
+            
+              <div style="display:flex;flex-direction:column;gap:12px;border-top:2px solid #FE6102;padding-top:20px">
+                <div style="font-family:Oswald;font-weight:700;font-size:44px;color:#FE6102;line-height:1">04</div>
+                <div style="font-family:Oswald;font-weight:700;font-size:26px;line-height:1.1;text-transform:uppercase">Cotización en minutos</div>
+                <div style="font-size:15px;line-height:1.55;color:rgba(255,255,255,.62)">Envía tu requerimiento por WhatsApp y recibe respuesta hoy.</div>
+              </div>
+            
+          </div>
+        </div>
+
+        <!-- comparativo -->
+        <div style="position:relative;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;min-height:720px">
+          <div style="position:absolute;top:0;left:0;width:220px;height:220px;background:#FE6102;clip-path:polygon(0 0,100% 0,0 100%)"></div>
+          <div style="padding:120px 80px 120px 120px;display:flex;flex-direction:column;gap:32px;justify-content:center">
+            <div style="font-size:13px;font-weight:600;letter-spacing:0.24em;color:#FE6102;text-transform:uppercase">Control tradicional vs Industria 4.0</div>
+            <h2 style="margin:0;font-family:Oswald;font-weight:700;font-size:72px;line-height:0.95;text-transform:uppercase">¿Cuál está operando <span style="color:#FE6102">tu planta</span>?</h2>
+            <p style="margin:0;font-style:italic;font-size:19px;color:rgba(255,255,255,.75);line-height:1.5">3 señales de que necesitas automatizar tu proceso.</p>
+            <div style="display:flex;flex-direction:column;border-top:1px solid rgba(255,255,255,.15)">
+              
+                <div style="display:flex;gap:24px;align-items:center;padding:22px 0;border-bottom:1px solid rgba(255,255,255,.15)">
+                  <div style="font-family:Oswald;font-weight:700;font-size:36px;color:#FE6102;width:48px;flex:none">01</div>
+                  <div style="font-size:18px;font-weight:500">Depende de que alguien esté siempre pendiente</div>
+                </div>
+              
+                <div style="display:flex;gap:24px;align-items:center;padding:22px 0;border-bottom:1px solid rgba(255,255,255,.15)">
+                  <div style="font-family:Oswald;font-weight:700;font-size:36px;color:#FE6102;width:48px;flex:none">02</div>
+                  <div style="font-size:18px;font-weight:500">Paradas no planificadas</div>
+                </div>
+              
+                <div style="display:flex;gap:24px;align-items:center;padding:22px 0;border-bottom:1px solid rgba(255,255,255,.15)">
+                  <div style="font-family:Oswald;font-weight:700;font-size:36px;color:#FE6102;width:48px;flex:none">03</div>
+                  <div style="font-size:18px;font-weight:500">Sin datos del proceso</div>
+                </div>
+              
+            </div>
+          </div>
+          <div style="position:relative;overflow:hidden">
+            <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;text-align:center;line-height:1.6;font-family:ui-monospace,Menlo,monospace;font-size:13px;background:repeating-linear-gradient(135deg,#1c1a19 0 12px,#161514 12px 24px);color:rgba(255,255,255,.55)">foto · técnico frente a tablero<br>(HMI / planta, foto oscura)</div>
+            <div style="position:absolute;inset:0;background:linear-gradient(90deg,#0C0B0B 0%,rgba(12,11,11,0) 35%)"></div>
+            <div style="position:absolute;right:0;bottom:0;width:180px;height:180px;background:#FE6102;clip-path:polygon(100% 0,100% 100%,0 100%)"></div>
+          </div>
+        </div>
+
+        <!-- aprende -->
+        <div style="padding:120px;display:flex;flex-direction:column;gap:56px">
+          <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:40px">
+            <h2 style="margin:0;font-family:Oswald;font-weight:700;font-size:72px;line-height:1;text-transform:uppercase">Aprende con <span style="color:#FE6102">ACC</span></h2>
+            <a href="#" style="font-size:15px;font-weight:600;color:#FE6102;text-transform:uppercase;letter-spacing:0.06em">@accinversiones →</a>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px">
+            
+              <a href="#" style="display:flex;flex-direction:column;gap:20px;color:#fff">
+                <div style="aspect-ratio:4/5;overflow:hidden;background:#161514"><img src="../img/breaker-negro.jpg" alt="¿Qué es realmente un breaker?" style="width:100%;height:100%;object-fit:cover"></div>
+                <div style="font-family:Oswald;font-weight:700;font-size:28px;line-height:1.1;text-transform:uppercase">¿Qué es realmente un breaker?</div>
+                <div style="font-size:14px;font-weight:600;color:#FE6102;letter-spacing:0.06em;text-transform:uppercase">Ver en Instagram →</div>
+              </a>
+            
+              <a href="#" style="display:flex;flex-direction:column;gap:20px;color:#fff">
+                <div style="aspect-ratio:4/5;overflow:hidden;background:#161514"><img src="../img/contactor.jpg" alt="¿Qué es un contactor y por qué tu motor lo necesita?" style="width:100%;height:100%;object-fit:cover"></div>
+                <div style="font-family:Oswald;font-weight:700;font-size:28px;line-height:1.1;text-transform:uppercase">¿Qué es un contactor y por qué tu motor lo necesita?</div>
+                <div style="font-size:14px;font-weight:600;color:#FE6102;letter-spacing:0.06em;text-transform:uppercase">Ver en Instagram →</div>
+              </a>
+            
+              <a href="#" style="display:flex;flex-direction:column;gap:20px;color:#fff">
+                <div style="aspect-ratio:4/5;overflow:hidden;background:#161514"><img src="../img/rele-termico.jpg" alt="¿Qué es un relé térmico?" style="width:100%;height:100%;object-fit:cover"></div>
+                <div style="font-family:Oswald;font-weight:700;font-size:28px;line-height:1.1;text-transform:uppercase">¿Qué es un relé térmico?</div>
+                <div style="font-size:14px;font-weight:600;color:#FE6102;letter-spacing:0.06em;text-transform:uppercase">Ver en Instagram →</div>
+              </a>
+            
+          </div>
+        </div>
+
+        <!-- contacto -->
+        <div style="background:#FE6102;color:#0C0B0B;padding:36px 120px;display:flex;justify-content:space-between;align-items:center;gap:40px">
+          <div style="font-family:Oswald;font-weight:700;font-size:56px;line-height:1;text-transform:uppercase">Cotiza aquí tu requerimiento</div>
+          <div style="font-style:italic;font-size:18px;font-weight:500">Respuesta en minutos por WhatsApp.</div>
+        </div>
+        <div style="padding:100px 120px;display:grid;grid-template-columns:1fr 1fr;gap:80px">
+          <div style="display:flex;flex-direction:column;gap:36px">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px 40px">
+              
+                <div style="display:flex;flex-direction:column;gap:6px">
+                  <div style="font-size:12px;font-weight:600;letter-spacing:0.2em;color:#FE6102;text-transform:uppercase">WhatsApp</div>
+                  <div style="font-size:19px;font-weight:500;line-height:1.3">0412-5003831</div>
+                </div>
+              
+                <div style="display:flex;flex-direction:column;gap:6px">
+                  <div style="font-size:12px;font-weight:600;letter-spacing:0.2em;color:#FE6102;text-transform:uppercase">Correo</div>
+                  <div style="font-size:19px;font-weight:500;line-height:1.3">attcliente2018@gmail.com</div>
+                </div>
+              
+                <div style="display:flex;flex-direction:column;gap:6px">
+                  <div style="font-size:12px;font-weight:600;letter-spacing:0.2em;color:#FE6102;text-transform:uppercase">Teléfonos</div>
+                  <div style="font-size:19px;font-weight:500;line-height:1.3">0412-5003831 / 0412-7480335</div>
+                </div>
+              
+                <div style="display:flex;flex-direction:column;gap:6px">
+                  <div style="font-size:12px;font-weight:600;letter-spacing:0.2em;color:#FE6102;text-transform:uppercase">Horario</div>
+                  <div style="font-size:19px;font-weight:500;line-height:1.3">Lun–Vie 8:00–17:00</div>
+                </div>
+              
+                <div style="display:flex;flex-direction:column;gap:6px">
+                  <div style="font-size:12px;font-weight:600;letter-spacing:0.2em;color:#FE6102;text-transform:uppercase">Ubicación</div>
+                  <div style="font-size:19px;font-weight:500;line-height:1.3">Valencia, Carabobo, Venezuela</div>
+                </div>
+              
+            </div>
+            <a href="#" style="background:#FE6102;color:#0C0B0B;font-weight:600;font-size:20px;padding:24px 40px;border-radius:4px;text-transform:uppercase;letter-spacing:0.04em;text-align:center">Escríbenos por WhatsApp</a>
+          </div>
+          <div style="position:relative;height:440px;background:repeating-linear-gradient(135deg,#1c1a19 0 12px,#161514 12px 24px);border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;font-family:ui-monospace,Menlo,monospace;font-size:13px;color:rgba(255,255,255,.55);text-align:center;line-height:1.6">mapa · Valencia, Carabobo<br>(insertar Google Maps)</div>
+        </div>
+
+        <!-- footer -->
+        <div style="border-top:1px solid rgba(255,255,255,.08);padding:56px 120px 40px;display:flex;flex-direction:column;gap:40px">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div style="display:flex;flex-direction:column;align-items:center;line-height:1">
+              <div style="position:relative;font-family:Oswald;font-weight:700;font-size:40px;color:#FE6102;letter-spacing:-0.04em;line-height:1">ACC<div style="position:absolute;left:0;right:0;top:47%;height:3px;background:#0C0B0B"></div></div>
+              <div style="font-size:8px;font-weight:600;letter-spacing:0.42em;color:#fff;margin-top:3px">INVERSIONES</div>
+            </div>
+            <div style="display:flex;gap:32px;font-size:14px;font-weight:500;color:rgba(255,255,255,.75)"><a href="#" style="color:inherit">Productos</a><a href="#" style="color:inherit">Marcas</a><a href="#" style="color:inherit">Por qué ACC</a><a href="#" style="color:inherit">Aprende</a><a href="#" style="color:inherit">Contacto</a></div>
+            <a href="#" style="font-size:14px;font-weight:600;color:#FE6102">@accinversiones</a>
+          </div>
+          <div style="font-size:13px;color:rgba(255,255,255,.45)">© Inversiones ACC 2018 C.A. · Valencia, Carabobo, Venezuela</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= A-MOBILE ================= -->
+    
+    <div id="A-mobile" style="display:flex;flex-direction:column;gap:12px;flex:none">
+      <div style="font-family:ui-monospace,Menlo,monospace;font-size:12px;color:#6b6560;display:flex;gap:10px;align-items:center"><span style="background:#0C0B0B;color:#FE6102;padding:3px 8px;font-weight:600">A-mobile</span>390 × auto</div>
+      <div data-screen-label="A-mobile" style="width:390px;background:#0C0B0B;color:#fff;font-family:Poppins,sans-serif;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.25)">
+        <div style="height:64px;padding:0 20px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.08);position:relative;z-index:2">
+          <div style="display:flex;flex-direction:column;align-items:center;line-height:1">
+            <div style="position:relative;font-family:Oswald;font-weight:700;font-size:30px;color:#FE6102;letter-spacing:-0.04em;line-height:1">ACC<div style="position:absolute;left:0;right:0;top:47%;height:2px;background:#0C0B0B"></div></div>
+            <div style="font-size:6px;font-weight:600;letter-spacing:0.42em;color:#fff;margin-top:2px">INVERSIONES</div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:5px;width:24px"><div style="height:2px;background:#fff"></div><div style="height:2px;background:#fff"></div><div style="height:2px;background:#FE6102;width:14px"></div></div>
+        </div>
+        <div style="position:relative;height:640px;overflow:hidden">
+          <img src="../img/tablero-control.jpg" alt="Tablero eléctrico" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 0%;transform:scale(1.6);transform-origin:50% 0%">
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,11,11,.55) 0%,rgba(12,11,11,.2) 30%,rgba(12,11,11,.92) 62%,#0C0B0B 100%)"></div>
+          <div style="position:absolute;left:20px;right:20px;bottom:36px;display:flex;flex-direction:column;gap:18px">
+            <div style="font-size:11px;font-weight:600;letter-spacing:0.22em;color:#FE6102;text-transform:uppercase">Suministros eléctricos · Valencia</div>
+            <h1 style="margin:0;font-family:Oswald;font-weight:700;font-size:58px;line-height:0.94;text-transform:uppercase">Maximizamos la <span style="color:#FE6102">continuidad</span> de tu planta</h1>
+            <p style="margin:0;font-style:italic;font-size:15px;line-height:1.5;color:rgba(255,255,255,.82)">Suministros eléctricos y automatización industrial con stock en Valencia. Cotiza hoy y recibe asesoría técnica.</p>
+            <div style="display:flex;flex-direction:column;gap:10px;margin-top:4px">
+              <a href="#" style="background:#FE6102;color:#0C0B0B;font-weight:600;font-size:14px;padding:16px;border-radius:4px;text-transform:uppercase;letter-spacing:0.04em;text-align:center">Cotiza por WhatsApp</a>
+              <a href="#" style="border:2px solid #fff;color:#fff;font-weight:600;font-size:14px;padding:14px;border-radius:4px;text-transform:uppercase;letter-spacing:0.04em;text-align:center">Ver productos</a>
+            </div>
+          </div>
+          <div style="position:absolute;right:0;top:0;width:90px;height:90px;background:#FE6102;clip-path:polygon(0 0,100% 0,100% 100%)"></div>
+        </div>
+        <div style="padding:64px 20px 48px;display:flex;flex-direction:column;gap:28px">
+          <h2 style="margin:0;font-family:Oswald;font-weight:700;font-size:40px;line-height:1;text-transform:uppercase">Productos <span style="color:#FE6102">con stock</span></h2>
+          <div style="display:flex;flex-direction:column;gap:12px">
+            
+              <div style="background:#161514;border:1px solid rgba(255,255,255,.08);position:relative;overflow:hidden;display:grid;grid-template-columns:120px 1fr">
+                <div style="overflow:hidden;background:#E9E5E1;min-height:150px"><img src="../img/breaker-caja-moldeada.jpg" alt="Protección eléctrica" style="width:100%;height:100%;object-fit:cover;transform:scale(1.15);transform-origin:50% 60%"></div>
+                <div style="position:absolute;top:0;left:0;width:32px;height:32px;background:#FE6102;clip-path:polygon(0 0,100% 0,0 100%)"></div>
+                <div style="padding:16px;display:flex;flex-direction:column;gap:8px">
+                  <div style="font-family:Oswald;font-weight:700;font-size:19px;line-height:1.05;text-transform:uppercase">Protección eléctrica</div>
+                  <div style="font-size:12px;line-height:1.5;color:rgba(255,255,255,.62);flex:1">Breakers, interruptores de caja moldeada.</div>
+                  <a href="#" style="color:#FE6102;font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:0.06em">Cotizar →</a>
+                </div>
+              </div>
+            
+              <div style="background:#161514;border:1px solid rgba(255,255,255,.08);position:relative;overflow:hidden;display:grid;grid-template-columns:120px 1fr">
+                <div style="overflow:hidden;background:#E9E5E1;min-height:150px"><img src="../img/contactor.jpg" alt="Control de motores" style="width:100%;height:100%;object-fit:cover;transform:scale(1.9);transform-origin:100% 45%"></div>
+                <div style="position:absolute;top:0;left:0;width:32px;height:32px;background:#FE6102;clip-path:polygon(0 0,100% 0,0 100%)"></div>
+                <div style="padding:16px;display:flex;flex-direction:column;gap:8px">
+                  <div style="font-family:Oswald;font-weight:700;font-size:19px;line-height:1.05;text-transform:uppercase">Control de motores</div>
+                  <div style="font-size:12px;line-height:1.5;color:rgba(255,255,255,.62);flex:1">Contactores, relés térmicos, guardamotores.</div>
+                  <a href="#" style="color:#FE6102;font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:0.06em">Cotizar →</a>
+                </div>
+              </div>
+            
+              <div style="background:#161514;border:1px solid rgba(255,255,255,.08);position:relative;overflow:hidden;display:grid;grid-template-columns:120px 1fr">
+                <div style="overflow:hidden;background:#E9E5E1;min-height:150px"><img src="../img/transmisor-presion.jpg" alt="Sensores e instrumentación" style="width:100%;height:100%;object-fit:cover;transform:scale(2.3);transform-origin:72% 100%"></div>
+                <div style="position:absolute;top:0;left:0;width:32px;height:32px;background:#FE6102;clip-path:polygon(0 0,100% 0,0 100%)"></div>
+                <div style="padding:16px;display:flex;flex-direction:column;gap:8px">
+                  <div style="font-family:Oswald;font-weight:700;font-size:19px;line-height:1.05;text-transform:uppercase">Sensores e instrumentación</div>
+                  <div style="font-size:12px;line-height:1.5;color:rgba(255,255,255,.62);flex:1">Sensores SICK, transmisores de presión Danfoss.</div>
+                  <a href="#" style="color:#FE6102;font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:0.06em">Cotizar →</a>
+                </div>
+              </div>
+            
+              <div style="background:#161514;border:1px solid rgba(255,255,255,.08);position:relative;overflow:hidden;display:grid;grid-template-columns:120px 1fr">
+                <div style="overflow:hidden;background:#E9E5E1;min-height:150px"><img src="../img/tablero-control.jpg" alt="Automatización" style="width:100%;height:100%;object-fit:cover;transform:scale(2.4);transform-origin:50% 0%"></div>
+                <div style="position:absolute;top:0;left:0;width:32px;height:32px;background:#FE6102;clip-path:polygon(0 0,100% 0,0 100%)"></div>
+                <div style="padding:16px;display:flex;flex-direction:column;gap:8px">
+                  <div style="font-family:Oswald;font-weight:700;font-size:19px;line-height:1.05;text-transform:uppercase">Automatización</div>
+                  <div style="font-size:12px;line-height:1.5;color:rgba(255,255,255,.62);flex:1">PLC, HMI, variadores de frecuencia.</div>
+                  <a href="#" style="color:#FE6102;font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:0.06em">Cotizar →</a>
+                </div>
+              </div>
+            
+          </div>
+        </div>
+        <div style="padding:32px 20px;border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:16px">
+          <div style="font-size:11px;font-weight:600;letter-spacing:0.22em;color:#FE6102;text-transform:uppercase">Marcas que representamos</div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px">
+            
+              <div style="padding:10px 14px;border:1px dashed rgba(255,255,255,.22);font-family:Oswald;font-weight:700;font-size:16px;letter-spacing:0.06em;text-transform:uppercase;color:rgba(255,255,255,.5)">Siemens</div>
+            
+              <div style="padding:10px 14px;border:1px dashed rgba(255,255,255,.22);font-family:Oswald;font-weight:700;font-size:16px;letter-spacing:0.06em;text-transform:uppercase;color:rgba(255,255,255,.5)">Schneider Electric</div>
+            
+              <div style="padding:10px 14px;border:1px dashed rgba(255,255,255,.22);font-family:Oswald;font-weight:700;font-size:16px;letter-spacing:0.06em;text-transform:uppercase;color:rgba(255,255,255,.5)">LS Electric</div>
+            
+              <div style="padding:10px 14px;border:1px dashed rgba(255,255,255,.22);font-family:Oswald;font-weight:700;font-size:16px;letter-spacing:0.06em;text-transform:uppercase;color:rgba(255,255,255,.5)">SICK</div>
+            
+              <div style="padding:10px 14px;border:1px dashed rgba(255,255,255,.22);font-family:Oswald;font-weight:700;font-size:16px;letter-spacing:0.06em;text-transform:uppercase;color:rgba(255,255,255,.5)">Danfoss</div>
+            
+          </div>
+        </div>
+        <div style="padding:64px 20px;display:flex;flex-direction:column;gap:32px">
+          <h2 style="margin:0;font-family:Oswald;font-weight:700;font-size:40px;line-height:1;text-transform:uppercase">¿Por qué <span style="color:#FE6102">ACC</span>?</h2>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px 16px">
+            
+              <div style="display:flex;flex-direction:column;gap:8px;border-top:2px solid #FE6102;padding-top:14px">
+                <div style="font-family:Oswald;font-weight:700;font-size:28px;color:#FE6102;line-height:1">01</div>
+                <div style="font-family:Oswald;font-weight:700;font-size:18px;line-height:1.1;text-transform:uppercase">Stock local en Valencia</div>
+                <div style="font-size:12px;line-height:1.5;color:rgba(255,255,255,.62)">Componentes disponibles para entrega inmediata.</div>
+              </div>
+            
+              <div style="display:flex;flex-direction:column;gap:8px;border-top:2px solid #FE6102;padding-top:14px">
+                <div style="font-family:Oswald;font-weight:700;font-size:28px;color:#FE6102;line-height:1">02</div>
+                <div style="font-family:Oswald;font-weight:700;font-size:18px;line-height:1.1;text-transform:uppercase">Asesoría técnica</div>
+                <div style="font-size:12px;line-height:1.5;color:rgba(255,255,255,.62)">Te ayudamos a elegir el componente correcto.</div>
+              </div>
+            
+              <div style="display:flex;flex-direction:column;gap:8px;border-top:2px solid #FE6102;padding-top:14px">
+                <div style="font-family:Oswald;font-weight:700;font-size:28px;color:#FE6102;line-height:1">03</div>
+                <div style="font-family:Oswald;font-weight:700;font-size:18px;line-height:1.1;text-transform:uppercase">Entregas rápidas</div>
+                <div style="font-size:12px;line-height:1.5;color:rgba(255,255,255,.62)">Despachos en Valencia y envíos a todo el país.</div>
+              </div>
+            
+              <div style="display:flex;flex-direction:column;gap:8px;border-top:2px solid #FE6102;padding-top:14px">
+                <div style="font-family:Oswald;font-weight:700;font-size:28px;color:#FE6102;line-height:1">04</div>
+                <div style="font-family:Oswald;font-weight:700;font-size:18px;line-height:1.1;text-transform:uppercase">Cotización en minutos</div>
+                <div style="font-size:12px;line-height:1.5;color:rgba(255,255,255,.62)">Envía tu requerimiento por WhatsApp y recibe respuesta hoy.</div>
+              </div>
+            
+          </div>
+        </div>
+        <div style="position:relative;overflow:hidden">
+          <div style="position:relative;height:260px;overflow:hidden">
+            <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;text-align:center;line-height:1.6;font-family:ui-monospace,Menlo,monospace;font-size:13px;background:repeating-linear-gradient(135deg,#1c1a19 0 12px,#161514 12px 24px);color:rgba(255,255,255,.55)">foto · técnico frente a tablero<br>(HMI / planta, foto oscura)</div>
+            <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,11,11,0) 40%,#0C0B0B 100%)"></div>
+            <div style="position:absolute;top:0;left:0;width:90px;height:90px;background:#FE6102;clip-path:polygon(0 0,100% 0,0 100%)"></div>
+          </div>
+          <div style="padding:8px 20px 64px;display:flex;flex-direction:column;gap:20px">
+            <div style="font-size:11px;font-weight:600;letter-spacing:0.22em;color:#FE6102;text-transform:uppercase">Control tradicional vs Industria 4.0</div>
+            <h2 style="margin:0;font-family:Oswald;font-weight:700;font-size:40px;line-height:0.95;text-transform:uppercase">¿Cuál está operando <span style="color:#FE6102">tu planta</span>?</h2>
+            <p style="margin:0;font-style:italic;font-size:15px;color:rgba(255,255,255,.75);line-height:1.5">3 señales de que necesitas automatizar tu proceso.</p>
+            <div style="display:flex;flex-direction:column;border-top:1px solid rgba(255,255,255,.15)">
+              
+                <div style="display:flex;gap:16px;align-items:center;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.15)">
+                  <div style="font-family:Oswald;font-weight:700;font-size:26px;color:#FE6102;width:36px;flex:none">01</div>
+                  <div style="font-size:14px;font-weight:500">Depende de que alguien esté siempre pendiente</div>
+                </div>
+              
+                <div style="display:flex;gap:16px;align-items:center;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.15)">
+                  <div style="font-family:Oswald;font-weight:700;font-size:26px;color:#FE6102;width:36px;flex:none">02</div>
+                  <div style="font-size:14px;font-weight:500">Paradas no planificadas</div>
+                </div>
+              
+                <div style="display:flex;gap:16px;align-items:center;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.15)">
+                  <div style="font-family:Oswald;font-weight:700;font-size:26px;color:#FE6102;width:36px;flex:none">03</div>
+                  <div style="font-size:14px;font-weight:500">Sin datos del proceso</div>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+        <div style="padding:64px 20px;display:flex;flex-direction:column;gap:28px">
+          <h2 style="margin:0;font-family:Oswald;font-weight:700;font-size:40px;line-height:1;text-transform:uppercase">Aprende con <span style="color:#FE6102">ACC</span></h2>
+          <div style="display:flex;flex-direction:column;gap:16px">
+            
+              <a href="#" style="display:grid;grid-template-columns:120px 1fr;gap:16px;align-items:center;color:#fff;background:#161514;border:1px solid rgba(255,255,255,.08)">
+                <div style="height:140px;overflow:hidden"><img src="../img/breaker-negro.jpg" alt="¿Qué es realmente un breaker?" style="width:100%;height:100%;object-fit:cover"></div>
+                <div style="display:flex;flex-direction:column;gap:8px;padding-right:16px">
+                  <div style="font-family:Oswald;font-weight:700;font-size:19px;line-height:1.1;text-transform:uppercase">¿Qué es realmente un breaker?</div>
+                  <div style="font-size:11px;font-weight:600;color:#FE6102;letter-spacing:0.06em;text-transform:uppercase">Ver en Instagram →</div>
+                </div>
+              </a>
+            
+              <a href="#" style="display:grid;grid-template-columns:120px 1fr;gap:16px;align-items:center;color:#fff;background:#161514;border:1px solid rgba(255,255,255,.08)">
+                <div style="height:140px;overflow:hidden"><img src="../img/contactor.jpg" alt="¿Qué es un contactor y por qué tu motor lo necesita?" style="width:100%;height:100%;object-fit:cover"></div>
+                <div style="display:flex;flex-direction:column;gap:8px;padding-right:16px">
+                  <div style="font-family:Oswald;font-weight:700;font-size:19px;line-height:1.1;text-transform:uppercase">¿Qué es un contactor y por qué tu motor lo necesita?</div>
+                  <div style="font-size:11px;font-weight:600;color:#FE6102;letter-spacing:0.06em;text-transform:uppercase">Ver en Instagram →</div>
+                </div>
+              </a>
+            
+              <a href="#" style="display:grid;grid-template-columns:120px 1fr;gap:16px;align-items:center;color:#fff;background:#161514;border:1px solid rgba(255,255,255,.08)">
+                <div style="height:140px;overflow:hidden"><img src="../img/rele-termico.jpg" alt="¿Qué es un relé térmico?" style="width:100%;height:100%;object-fit:cover"></div>
+                <div style="display:flex;flex-direction:column;gap:8px;padding-right:16px">
+                  <div style="font-family:Oswald;font-weight:700;font-size:19px;line-height:1.1;text-transform:uppercase">¿Qué es un relé térmico?</div>
+                  <div style="font-size:11px;font-weight:600;color:#FE6102;letter-spacing:0.06em;text-transform:uppercase">Ver en Instagram →</div>
+                </div>
+              </a>
+            
+          </div>
+        </div>
+        <div style="background:#FE6102;color:#0C0B0B;padding:24px 20px;display:flex;flex-direction:column;gap:6px">
+          <div style="font-family:Oswald;font-weight:700;font-size:34px;line-height:1;text-transform:uppercase">Cotiza aquí tu requerimiento</div>
+          <div style="font-style:italic;font-size:13px;font-weight:500">Respuesta en minutos por WhatsApp.</div>
+        </div>
+        <div style="padding:48px 20px;display:flex;flex-direction:column;gap:28px">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px 16px">
+            
+              <div style="display:flex;flex-direction:column;gap:4px">
+                <div style="font-size:10px;font-weight:600;letter-spacing:0.2em;color:#FE6102;text-transform:uppercase">WhatsApp</div>
+                <div style="font-size:13px;font-weight:500;line-height:1.3;overflow-wrap:anywhere">0412-5003831</div>
+              </div>
+            
+              <div style="display:flex;flex-direction:column;gap:4px">
+                <div style="font-size:10px;font-weight:600;letter-spacing:0.2em;color:#FE6102;text-transform:uppercase">Correo</div>
+                <div style="font-size:13px;font-weight:500;line-height:1.3;overflow-wrap:anywhere">attcliente2018@gmail.com</div>
+              </div>
+            
+              <div style="display:flex;flex-direction:column;gap:4px">
+                <div style="font-size:10px;font-weight:600;letter-spacing:0.2em;color:#FE6102;text-transform:uppercase">Teléfonos</div>
+                <div style="font-size:13px;font-weight:500;line-height:1.3;overflow-wrap:anywhere">0412-5003831 / 0412-7480335</div>
+              </div>
+            
+              <div style="display:flex;flex-direction:column;gap:4px">
+                <div style="font-size:10px;font-weight:600;letter-spacing:0.2em;color:#FE6102;text-transform:uppercase">Horario</div>
+                <div style="font-size:13px;font-weight:500;line-height:1.3;overflow-wrap:anywhere">Lun–Vie 8:00–17:00</div>
+              </div>
+            
+              <div style="display:flex;flex-direction:column;gap:4px">
+                <div style="font-size:10px;font-weight:600;letter-spacing:0.2em;color:#FE6102;text-transform:uppercase">Ubicación</div>
+                <div style="font-size:13px;font-weight:500;line-height:1.3;overflow-wrap:anywhere">Valencia, Carabobo, Venezuela</div>
+              </div>
+            
+          </div>
+          <a href="#" style="background:#FE6102;color:#0C0B0B;font-weight:600;font-size:16px;padding:20px;border-radius:4px;text-transform:uppercase;letter-spacing:0.04em;text-align:center">Escríbenos por WhatsApp</a>
+          <div style="height:200px;background:repeating-linear-gradient(135deg,#1c1a19 0 12px,#161514 12px 24px);border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;font-family:ui-monospace,Menlo,monospace;font-size:12px;color:rgba(255,255,255,.55);text-align:center;line-height:1.6">mapa · Valencia, Carabobo</div>
+        </div>
+        <div style="border-top:1px solid rgba(255,255,255,.08);padding:40px 20px 32px;display:flex;flex-direction:column;gap:24px">
+          <div style="display:flex;flex-direction:column;align-items:flex-start;line-height:1">
+            <div style="position:relative;font-family:Oswald;font-weight:700;font-size:34px;color:#FE6102;letter-spacing:-0.04em;line-height:1">ACC<div style="position:absolute;left:0;right:0;top:47%;height:2px;background:#0C0B0B"></div></div>
+            <div style="font-size:7px;font-weight:600;letter-spacing:0.42em;color:#fff;margin-top:2px">INVERSIONES</div>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:12px 20px;font-size:13px;font-weight:500;color:rgba(255,255,255,.75)"><a href="#" style="color:inherit">Productos</a><a href="#" style="color:inherit">Marcas</a><a href="#" style="color:inherit">Por qué ACC</a><a href="#" style="color:inherit">Aprende</a><a href="#" style="color:inherit">Contacto</a></div>
+          <a href="#" style="font-size:13px;font-weight:600;color:#FE6102">@accinversiones</a>
+          <div style="font-size:11px;color:rgba(255,255,255,.45)">© Inversiones ACC 2018 C.A.</div>
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- ================= A-GUÍA ================= -->
+    
+    <div id="A-guia" style="display:flex;flex-direction:column;gap:12px;flex:none">
+      <div style="font-family:ui-monospace,Menlo,monospace;font-size:12px;color:#6b6560;display:flex;gap:10px;align-items:center"><span style="background:#0C0B0B;color:#FE6102;padding:3px 8px;font-weight:600">A-guía</span>mini guía de estilo</div>
+      <div data-screen-label="A-guía" style="width:560px;background:#fff;color:#0C0B0B;padding:40px;display:flex;flex-direction:column;gap:36px;box-shadow:0 30px 80px rgba(0,0,0,.2)">
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <div style="font-size:11px;font-weight:600;letter-spacing:0.22em;color:#FE6102;text-transform:uppercase">Paleta</div>
+          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;font-family:ui-monospace,Menlo,monospace;font-size:11px">
+            <div style="display:flex;flex-direction:column;gap:6px"><div style="height:64px;background:#FE6102"></div>#FE6102 · marca / CTA</div>
+            <div style="display:flex;flex-direction:column;gap:6px"><div style="height:64px;background:#0C0B0B"></div>#0C0B0B · fondo</div>
+            <div style="display:flex;flex-direction:column;gap:6px"><div style="height:64px;background:#161514;border:1px solid #ddd"></div>#161514 · tarjeta</div>
+            <div style="display:flex;flex-direction:column;gap:6px"><div style="height:64px;background:#E9E5E1"></div>#E9E5E1 · producto</div>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <div style="font-size:11px;font-weight:600;letter-spacing:0.22em;color:#FE6102;text-transform:uppercase">Tipografía</div>
+          <div style="background:#0C0B0B;color:#fff;padding:24px;display:flex;flex-direction:column;gap:14px">
+            <div style="font-family:Oswald;font-weight:700;font-size:56px;line-height:0.95;text-transform:uppercase">Titular <span style="color:#FE6102">Oswald 700</span></div>
+            <div style="font-family:Oswald;font-weight:700;font-size:26px;line-height:1.05;text-transform:uppercase">Subtítulo de tarjeta 26px</div>
+            <div style="font-size:15px;line-height:1.55;color:rgba(255,255,255,.75)">Cuerpo Poppins 400 · 15–16px. Texto técnico, frases cortas y directas al responsable de planta.</div>
+            <div style="font-style:italic;font-size:17px;color:rgba(255,255,255,.82)">Frases de apoyo en Poppins itálica.</div>
+            <div style="font-size:12px;font-weight:600;letter-spacing:0.24em;color:#FE6102;text-transform:uppercase">Etiqueta · 12px · tracking 0.24em</div>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <div style="font-size:11px;font-weight:600;letter-spacing:0.22em;color:#FE6102;text-transform:uppercase">Botones</div>
+          <div style="background:#0C0B0B;padding:24px;display:flex;flex-wrap:wrap;gap:12px;align-items:center">
+            <span style="background:#FE6102;color:#0C0B0B;font-weight:600;font-size:14px;padding:14px 24px;border-radius:4px;text-transform:uppercase;letter-spacing:0.04em">Primario</span>
+            <span style="border:2px solid #fff;color:#fff;font-weight:600;font-size:14px;padding:12px 24px;border-radius:4px;text-transform:uppercase;letter-spacing:0.04em">Secundario</span>
+            <span style="border:2px solid #FE6102;color:#FE6102;font-weight:600;font-size:14px;padding:12px 24px;border-radius:4px;text-transform:uppercase;letter-spacing:0.04em">Cotizar</span>
+            <span style="color:#FE6102;font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:0.06em">Enlace →</span>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <div style="font-size:11px;font-weight:600;letter-spacing:0.22em;color:#FE6102;text-transform:uppercase">Tarjeta y elementos</div>
+          <div style="background:#0C0B0B;padding:24px;display:grid;grid-template-columns:220px 1fr;gap:24px">
+            <div style="background:#161514;border:1px solid rgba(255,255,255,.08);position:relative;overflow:hidden;color:#fff">
+              <div style="height:130px;overflow:hidden;background:#E9E5E1"><img src="../img/breaker-caja-moldeada.jpg" alt="Breaker" style="width:100%;height:100%;object-fit:cover;transform:scale(1.15);transform-origin:50% 60%"></div>
+              <div style="position:absolute;top:0;left:0;width:40px;height:40px;background:#FE6102;clip-path:polygon(0 0,100% 0,0 100%)"></div>
+              <div style="padding:16px;display:flex;flex-direction:column;gap:8px">
+                <div style="font-family:Oswald;font-weight:700;font-size:18px;line-height:1.05;text-transform:uppercase">Protección eléctrica</div>
+                <div style="font-size:11px;line-height:1.5;color:rgba(255,255,255,.62)">Breakers, caja moldeada</div>
+                <span style="border:2px solid #FE6102;color:#FE6102;font-weight:600;font-size:11px;padding:8px;text-align:center;border-radius:4px;text-transform:uppercase">Cotizar</span>
+              </div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:12px;font-family:ui-monospace,Menlo,monospace;font-size:11px;color:rgba(255,255,255,.7)">
+              <div style="position:relative;height:56px;background:#161514"><div style="position:absolute;top:0;left:0;width:56px;height:56px;background:#FE6102;clip-path:polygon(0 0,100% 0,0 100%)"></div></div>
+              esquina diagonal naranja · secciones y tarjetas
+              <div style="height:36px;background:#FE6102;color:#0C0B0B;display:flex;align-items:center;padding:0 12px;font-family:Oswald;font-weight:700;font-size:16px;text-transform:uppercase">Franja naranja</div>
+              radio ≤ 4px · bordes rectos · fotos oscuras a sangre
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+
+
+
+</body></html>
