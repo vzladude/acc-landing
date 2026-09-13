@@ -288,7 +288,7 @@ img { display: block; width: 100%; height: 100%; object-fit: contain; }
 .menu-links > a:nth-child(6) { animation-delay: 175ms; }
 .reveal-ready { opacity: 0; transform: translateY(20px); transition: opacity .65s var(--ease-out) var(--reveal-delay, 0ms), transform .65s var(--ease-out) var(--reveal-delay, 0ms), border-color .25s, background-color .25s, box-shadow .3s; }
 .reveal-ready.is-revealed { opacity: 1; transform: none; }
-.reveal-ready:focus-within { opacity: 1; transform: none; transition-delay: 0s; }
+.reveal-ready:focus-within { opacity: 1; transform: none; transition: none; }
 @keyframes menu-enter {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: none; }
