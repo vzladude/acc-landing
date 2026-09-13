@@ -267,7 +267,43 @@ img { display: block; width: 100%; height: 100%; object-fit: contain; }
   .hero-actions .button--outline { padding: 14px; }
   .hero-corner { top: 0; bottom: auto; width: 90px; height: 90px; clip-path: polygon(0 0, 100% 0, 100% 100%); }
 }
+/* Motion enhances the static page; no content depends on an animation finishing. */
+:root { --ease-out: cubic-bezier(.22, 1, .36, 1); }
+.button, .product-quote { transition: color .2s, background-color .2s, border-color .2s, box-shadow .25s, transform .25s var(--ease-out); }
+.button:active, .product-quote:active { transform: translateY(1px); }
+.header-nav a, .footer-nav a { position: relative; transition: color .2s; }
+.header-nav a::after, .footer-nav a::after { content: ""; position: absolute; left: 0; right: 0; bottom: -5px; height: 2px; background: var(--orange); transform: scaleX(0); transform-origin: left; transition: transform .3s var(--ease-out); }
+.header-nav a:is(:hover, :focus-visible)::after, .footer-nav a:is(:hover, :focus-visible)::after { transform: scaleX(1); }
+.product-card, .brand-list li { transition: border-color .25s, background-color .25s, box-shadow .3s, transform .35s var(--ease-out); }
+.learn-image { transition: box-shadow .3s; }
+.learn-content span { transition: color .2s, transform .3s var(--ease-out); }
+.product-card:focus-within, .brand-list li:focus-within { border-color: rgba(254, 97, 2, .55); }
+.learn-card:focus-visible .learn-image { box-shadow: 0 0 0 1px var(--orange); }
+.mobile-menu[open] .menu-top { animation: menu-enter .3s var(--ease-out) both; }
+.mobile-menu[open] .menu-links > a { animation: menu-enter .4s var(--ease-out) both; }
+.menu-links > a:nth-child(2) { animation-delay: 35ms; }
+.menu-links > a:nth-child(3) { animation-delay: 70ms; }
+.menu-links > a:nth-child(4) { animation-delay: 105ms; }
+.menu-links > a:nth-child(5) { animation-delay: 140ms; }
+.menu-links > a:nth-child(6) { animation-delay: 175ms; }
+.reveal-ready { opacity: 0; transform: translateY(20px); transition: opacity .65s var(--ease-out) var(--reveal-delay, 0ms), transform .65s var(--ease-out) var(--reveal-delay, 0ms), border-color .25s, background-color .25s, box-shadow .3s; }
+.reveal-ready.is-revealed { opacity: 1; transform: none; }
+.reveal-ready:focus-within { opacity: 1; transform: none; transition-delay: 0s; }
+@keyframes menu-enter {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: none; }
+}
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .button:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(254, 97, 2, .13); }
+  .button--outline:hover { box-shadow: 0 8px 24px rgba(255, 255, 255, .08); }
+  .product-card:hover { transform: translateY(-4px); border-color: rgba(254, 97, 2, .55); box-shadow: 0 12px 30px rgba(0, 0, 0, .18); }
+  .brand-list li:hover { transform: translateY(-3px); border-color: rgba(255, 255, 255, .25); background-color: rgba(255, 255, 255, .05); }
+  .learn-card:hover .learn-image { box-shadow: 0 0 0 1px rgba(254, 97, 2, .65); }
+  .learn-card:hover .learn-content span { color: var(--orange-hover); transform: translateX(4px); }
+}
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition: none !important; animation: none !important; }
+  .reveal-ready { opacity: 1; transform: none; }
+  .button, .product-card, .brand-list li, .learn-content span { transform: none !important; }
 }

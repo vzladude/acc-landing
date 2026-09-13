@@ -83,4 +83,61 @@
     const source = `https://www.google.com/maps?${query}`;
     if (map.src !== source) map.src = source;
   }
+
+  const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const revealGroups = [
+    '.products .section-heading, .product-card',
+    '.brands .eyebrow, .brand-list li',
+    '.benefits-heading, .benefit',
+    '.industry-content > *, .industry-photo',
+    '.learn .section-heading, .learn-card',
+    '.contact-band-inner, .contact-grid > div, .contact-cta',
+  ];
+  let revealObserver;
+
+  const stopMotion = () => {
+    revealObserver?.disconnect();
+    document.querySelectorAll('.reveal-ready').forEach((element) => {
+      element.classList.remove('reveal-ready');
+      element.classList.add('is-revealed');
+    });
+  };
+
+  const startMotion = () => {
+    if (motionPreference.matches || !('IntersectionObserver' in window)) return;
+
+    revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('is-revealed');
+        revealObserver.unobserve(entry.target);
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -32px 0px' });
+
+    revealGroups.forEach((selector) => {
+      document.querySelectorAll(selector).forEach((element, index) => {
+        // Keep initial and anchor-target content visible, including after reloads.
+        if (element.getBoundingClientRect().top < window.innerHeight || element.classList.contains('is-revealed')) return;
+        element.style.setProperty('--reveal-delay', `${(index % 4) * 65}ms`);
+        element.classList.add('reveal-ready');
+        revealObserver.observe(element);
+      });
+    });
+  };
+
+  // Focusing a link reveals its container immediately, regardless of scroll position.
+  document.addEventListener('focusin', (event) => {
+    let element = event.target.closest('.reveal-ready');
+    while (element) {
+      element.classList.add('is-revealed');
+      element.style.setProperty('--reveal-delay', '0ms');
+      revealObserver?.unobserve(element);
+      element = element.parentElement?.closest('.reveal-ready');
+    }
+  });
+  motionPreference.addEventListener('change', () => {
+    if (motionPreference.matches) stopMotion();
+    else startMotion();
+  });
+  startMotion();
 })();
