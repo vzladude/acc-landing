@@ -14,8 +14,9 @@ Visit `http://localhost:8000`. Google Fonts and the embedded Google map require 
 
 ## Customize
 
-- **Images:** replace files in `img/` and preserve their names. The supplied JPEGs are used unchanged. Update each HTML `width` and `height` if dimensions change. The `.crop--*` rules in `css/styles.css` deliberately crop the social-post text from product photos; review both desktop and mobile before changing them.
-- **Logo:** replace the single inline `<symbol id="logo">` in `index.html`; header and footer reuse it through `<use>`. Update `favicon.svg` too. Brand tiles have a separate TODO for official SVG logos.
+- **Images:** all foreground images use `object-fit: contain`. Product and learning cards show the complete supplied JPEGs; hero and industry use cleaned WebP derivatives. The `.media-surround` backgrounds fill unused image space with generated industrial/studio textures. Original JPEGs remain unchanged. When replacing an image, update its `src`, `width`, `height`, and `alt`, then review both desktop and mobile. Exact generation prompts and saved asset paths are in [design/ASSET_NOTES.md](design/ASSET_NOTES.md).
+- **Logo:** replace the single inline `<symbol id="logo">` in `index.html`; header and footer reuse it through `<use>`. Update `favicon.svg` too. The five brand logos are local files in `img/brands/`; their provenance is documented in the asset notes. Keep Danfoss in its native red/white colors.
+- **Motion:** below-fold blocks reveal once using IntersectionObserver; buttons, cards, links, and the mobile menu have restrained transitions. CSS timing lives at the end of `css/styles.css`, and reveal groups are at the end of `js/main.js`. Initial content remains visible, keyboard focus reveals its container immediately, and `prefers-reduced-motion` disables movement. Without JavaScript or IntersectionObserver, all content stays visible.
 - **WhatsApp:** edit the number and messages in the `CONFIG` object at the top of `js/main.js`. Update the static `data-whatsapp` link URLs in `index.html` as well, so the no-JavaScript fallback agrees. Use country-code digits only, without a plus sign. Keep displayed phone numbers, `tel:` links, and JSON-LD consistent.
 - **Instagram and map:** update `CONFIG.instagramUrl` / `CONFIG.mapsQuery` and the corresponding static HTML fallbacks. Update JSON-LD `sameAs` when Instagram changes.
 - **Domain:** complete the canonical TODO and add `og:url` once the public domain is known. Social-image paths are relative as specified; use the final fully qualified image URL if your sharing platform requires it.
@@ -48,4 +49,4 @@ bash -n deploy.sh
 env -u S3_BUCKET -u CLOUDFRONT_DISTRIBUTION_ID bash deploy.sh
 ```
 
-The final command must fail with a missing-variable message. Compare desktop (1440×900) and mobile (390×844) screenshots against the reference artboards, check widths 320–1920px for overflow, exercise navigation and the mobile menu with a keyboard, and run mobile Lighthouse against the local HTTP server. See `IMPLEMENTATION_NOTES.md` for the completed acceptance results.
+The final command must fail with a missing-variable message. Review desktop (1440×900) and mobile (390×844) screenshots against the reference, allowing the subsequently requested contained imagery, real logos, and motion. Check widths 320–1920px for overflow, exercise navigation and the mobile menu with a keyboard, and run mobile Lighthouse against the local HTTP server. See `IMPLEMENTATION_NOTES.md` for the completed acceptance results.
