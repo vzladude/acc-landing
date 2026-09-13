@@ -101,6 +101,11 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .product-quote:hover { background: var(--orange); color: var(--black); }
 .mobile-arrow { display: none; }
 
+.brands { border-top: var(--border); border-bottom: var(--border); }
+.brands-inner { padding-block: 56px; display: flex; flex-direction: column; gap: 32px; }
+.brand-list { display: flex; justify-content: space-between; gap: 24px; padding: 0; list-style: none; }
+.brand-list li { flex: 1; min-height: 86px; border: 1px dashed rgba(255, 255, 255, .22); display: flex; align-items: center; justify-content: center; font: 700 26px var(--heading-font); letter-spacing: .06em; text-transform: uppercase; color: rgba(255, 255, 255, .5); }
+
 @media (max-width: 1439px) {
   :root { --gutter: 64px; }
   .header-nav { gap: 24px; }
@@ -122,6 +127,9 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
   .section-heading { display: block; }
   .section-heading .support { display: none; }
   .desktop-copy { display: none; }
+  .brands-inner { padding-block: 32px; gap: 16px; }
+  .brand-list { justify-content: flex-start; flex-wrap: wrap; gap: 8px; }
+  .brand-list li { flex: none; min-height: 0; padding: 10px 14px; font-size: 16px; }
   .products { padding-block: 64px 48px; gap: 28px; }
   .product-grid { grid-template-columns: minmax(0, 1fr); gap: 12px; }
   .product-card { display: grid; grid-template-columns: 120px minmax(0, 1fr); }
