@@ -21,6 +21,8 @@ Verification on this revision:
 - Keyboard menu checks pass: Enter opens, Tab/Shift+Tab wrap, Escape closes and restores focus, and selecting a mobile anchor closes the menu and focuses the destination.
 - Mobile Lighthouse 13.5.0, run at **2026-09-24 00:05:00 UTC** (September 23 in Venezuela): **95 Performance, 100 Accessibility, 100 Best Practices, 100 SEO**. FCP 1.1s, LCP 2.9s, CLS 0.01, TBT 40ms. Reports: `/tmp/acc-phase1-qa/artifacts/lighthouse.report.html` and `.json`; optional QA tooling is outside the repository.
 
+Publication: [GitHub Pages deployment 35937122502](https://github.com/vzladude/acc-landing/actions/runs/35937122502) succeeded for site commit `24f7d9d6114b893b56baaba0fc3bc16a661def9b`. The public site was visually verified with the official logo and updated hero/brand/benefit content; all 23 hosted files returned HTTP 200 and matched the local bytes. Evidence: `/tmp/acc-phase1-qa/artifacts/published-files.json`. The working tree is on `main`, with the phase's section commits preserved.
+
 ## Earlier implementation and publication — September 13, 2026
 
 Completed and refined on September 13, 2026, on branch `codex/landing-page`, then fast-forwarded to `main` for GitHub Pages publication.
