@@ -115,6 +115,7 @@ img { display: block; width: 100%; height: 100%; object-fit: contain; }
 .benefits-heading .support { max-width: 360px; font-size: 17px; color: rgba(255, 255, 255, .7); }
 .benefit-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px 40px; padding: 0; list-style: none; }
 .benefit { display: flex; flex-direction: column; gap: 12px; border-top: 2px solid var(--orange); padding-top: 20px; }
+.benefit:last-child { grid-column: 1 / -1; }
 .benefit-number { font: 700 44px/1 var(--heading-font); color: var(--orange); }
 .benefit h3 { font-size: 26px; line-height: 1.1; }
 .benefit p { font-size: 15px; line-height: 1.55; color: var(--text-muted); }
