@@ -1,5 +1,11 @@
 # Asset notes
 
+## ACC logo supplied September 23, 2026
+
+The user supplied `logos acc (1).png` as the true ACC logo. It is stored at `img/acc-logo.png` (500×500, transparent PNG), byte-for-byte identical to the attachment. No ImageGen, tracing, recoloring, or raster editing was used for this logo. A shared inline SVG symbol uses viewBox `12 172 480 160` to frame the artwork's transparent margins at its original aspect ratio. Header and footer reuse that symbol. The favicon embeds the same PNG in a self-contained SVG and frames the ACC mark without the small caption; its URL has a version query to refresh cached provisional favicons.
+
+The following generated photography and supplier-logo provenance describe the earlier September 13 work and remain unchanged.
+
 Updated September 13, 2026, following the user's request for contained images, ImageGen surroundings, real brand logos, and professional motion.
 
 ## Image treatment
@@ -61,4 +67,3 @@ Use case: precise-object-edit. Asset type: professional industrial landing-page 
 ```text
 Use case: precise-object-edit. Asset type: clean professional industrial website photograph, portrait 1024x1280. The attached image is the EDIT TARGET. Remove only the advertising overlays: all large promotional lettering at the top, the italic promotional lettering in the lower middle, and the orange/black ACC logo at the bottom. Reconstruct the real photographic scene behind those overlays seamlessly. Preserve the full original composition without cropping or zooming: the technician viewed from behind wearing a hard hat and gray work shirt, their original pose and arm reaching toward the electrical cabinet touchscreen, the electrical cabinet equipment, workshop background, perspective, and natural lighting. Keep the person's face turned away as in the original. Preserve tiny equipment markings that belong physically to the machinery, but do not invent new readable labels. Extend small missing areas only as needed to keep the entire subject and cabinet within the portrait frame. Photorealistic, precise and understated, matching the original photograph. No new person, no duplicate limbs, no advertising text, no large letters, no added logos, no watermark. Output only the cleaned photograph, not a mockup, poster, or website.
 ```
-

@@ -1,5 +1,28 @@
 # Implementation notes
 
+## Phase 1 — identity and positioning, September 23, 2026
+
+Implemented the user's approved first phase on `codex/phase-1-identity-copy`, with separate commits for the logo, hero/metadata, product heading, brand wording, five benefits, and contact copy.
+
+- Replaced the provisional typed ACC mark in header, footer, and favicon with the supplied official PNG. The source file at `img/acc-logo.png` is byte-for-byte unchanged; SVG viewports frame the existing artwork without editing its pixels. Details are in `design/ASSET_NOTES.md`.
+- Kept “Maximizamos la continuidad de tu planta” and placed “ACC no solo suministra, sino que ayuda a identificar la solución correcta.” directly below it.
+- Replaced the product stock heading with “Suministros eléctricos y soluciones de automatización” and removed stock/immediate-delivery/minute-based/same-day response claims from all live copy and search/social descriptions. Visually inspected the retained source posts for conflicting claims.
+- Changed the supplier heading to “Trabajamos con marcas reconocidas”.
+- Replaced the four old benefits with five concrete points: understanding the requirement, finding the solution, recognized brands, optimizing the purchase, and accompanying the customer. The fifth benefit spans both columns, preserving the existing typography and orange-rule styling.
+- Contact now says “Gestionamos tu requerimiento con rapidez” and lists “Realizamos envíos nacionales” under coverage. The confirmed destination email remains `attcliente2018@gmail.com`.
+- Adjusted logo dimensions and the longer product heading across breakpoints. Existing contained imagery, animation, WhatsApp destinations, map, and source/reference files remain intact.
+
+Scope follows the phased plan: form delivery is phase 2, analytics is phase 3, and expanded categories/process/verified trust data are phase 4. Phase 1 does not mark the complete original P0 feedback as finished. No form or analytics service was configured in this phase.
+
+Verification on this revision:
+
+- HTML validation, JavaScript syntax, Bash syntax, and whitespace checks pass. A scan of live text and metadata finds none of the retired claims. All nine WhatsApp destinations retain the correct number and exact default/category message; the confirmed email link is correct.
+- Browser checks at 320, 360, 390, 600, 767, 768, 820, 900, 1024, 1100, 1280, 1440, and 1920px show no horizontal overflow, product-title clipping, or overlapping header controls. Desktop and mobile visual review includes the supplied logo, revised copy, product heading, and five benefits.
+- Keyboard menu checks pass: Enter opens, Tab/Shift+Tab wrap, Escape closes and restores focus, and selecting a mobile anchor closes the menu and focuses the destination.
+- Mobile Lighthouse 13.5.0, run at **2026-09-24 00:05:00 UTC** (September 23 in Venezuela): **95 Performance, 100 Accessibility, 100 Best Practices, 100 SEO**. FCP 1.1s, LCP 2.9s, CLS 0.01, TBT 40ms. Reports: `/tmp/acc-phase1-qa/artifacts/lighthouse.report.html` and `.json`; optional QA tooling is outside the repository.
+
+## Earlier implementation and publication — September 13, 2026
+
 Completed and refined on September 13, 2026, on branch `codex/landing-page`, then fast-forwarded to `main` for GitHub Pages publication.
 
 The page uses plain HTML, CSS, and a dependency-free JavaScript IIFE. Every original page section was implemented and committed in specification order: header, hero, products, brands, benefits, industry, learning, contact, and footer. SEO/deployment, verification corrections, and the subsequent visual refinements have separate conventional commits. There is no build step, package manifest, runtime npm dependency, or application analytics.
@@ -15,7 +38,7 @@ After approving the initial implementation as nearly perfect, the user requested
 - **Real brands:** Siemens, Schneider Electric, LS Electric, SICK, and Danfoss now use locally hosted authentic artwork. Five equal desktop tiles become a two-column mobile grid. Siemens, Schneider, and LS use white CSS silhouettes; SICK uses white source artwork, while Danfoss retains red and white. Source links, processing, exact ImageGen prompts, input references, and saved paths are in [design/ASSET_NOTES.md](design/ASSET_NOTES.md).
 - **Motion:** below-fold sections and cards reveal once with a short fade and 20px vertical movement, staggered by 65ms. Buttons, cards, navigation underlines, Instagram links, and the mobile menu have restrained interactions. The initial hero is never hidden for an entrance animation. Focus immediately reveals its container. Reduced-motion preferences disable movement, including when changed during the session; no-JavaScript and no-IntersectionObserver fallbacks keep all content visible.
 
-## Current acceptance results — SPEC.md section 9
+## September 13 acceptance results — SPEC.md section 9
 
 | Criterion | Result | Evidence |
 | --- | --- | --- |
@@ -55,7 +78,7 @@ Published September 13, 2026, at the user's explicit request:
 
 Optional QA tools are installed outside the repository at `/tmp/acc-landing-qa`; they are not site dependencies.
 
-Current artifacts:
+September 13 artifacts:
 
 - `/tmp/acc-landing-qa/refinement-artifacts/`: final full pages, target viewports, section crops, and geometry for 1440px and 390px.
 - `/tmp/acc-landing-qa/artifacts/refinement-acceptance.json`: complete final functional and 1,601-width checks.

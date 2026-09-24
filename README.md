@@ -1,6 +1,6 @@
 # ACC Landing
 
-Responsive Spanish landing page for Inversiones ACC 2018 C.A. Built with plain HTML, CSS, and JavaScript, with no build step or runtime dependencies. `SPEC.md` defines the requirements; `design/reference.html` is the unchanged design source.
+Responsive Spanish landing page for Inversiones ACC 2018 C.A. Built with plain HTML, CSS, and JavaScript, with no build step or runtime dependencies. `SPEC.md` defines the original requirements; `design/reference.html` is the unchanged design source. Subsequent approved feedback and verification are recorded in `IMPLEMENTATION_NOTES.md`.
 
 ## Run locally
 
@@ -15,7 +15,7 @@ Visit `http://localhost:8000`. Google Fonts and the embedded Google map require 
 ## Customize
 
 - **Images:** all foreground images use `object-fit: contain`. Product and learning cards show the complete supplied JPEGs; hero and industry use cleaned WebP derivatives. The `.media-surround` backgrounds fill unused image space with generated industrial/studio textures. Original JPEGs remain unchanged. When replacing an image, update its `src`, `width`, `height`, and `alt`, then review both desktop and mobile. Exact generation prompts and saved asset paths are in [design/ASSET_NOTES.md](design/ASSET_NOTES.md).
-- **Logo:** replace the single inline `<symbol id="logo">` in `index.html`; header and footer reuse it through `<use>`. Update `favicon.svg` too. The five brand logos are local files in `img/brands/`; their provenance is documented in the asset notes. Keep Danfoss in its native red/white colors.
+- **Logo:** `img/acc-logo.png` is the original transparent PNG supplied by ACC, preserved without pixel edits. The shared `<symbol id="logo">` frames its artwork with an SVG viewBox for the header and footer. Update that viewBox if replacement artwork has different margins. `favicon.svg` embeds the same image and frames the ACC mark; update it when replacing the logo. The five supplier logos are local files in `img/brands/`; their provenance is documented in the asset notes. Keep Danfoss in its native red/white colors.
 - **Motion:** below-fold blocks reveal once using IntersectionObserver; buttons, cards, links, and the mobile menu have restrained transitions. CSS timing lives at the end of `css/styles.css`, and reveal groups are at the end of `js/main.js`. Initial content remains visible, keyboard focus reveals its container immediately, and `prefers-reduced-motion` disables movement. Without JavaScript or IntersectionObserver, all content stays visible.
 - **WhatsApp:** edit the number and messages in the `CONFIG` object at the top of `js/main.js`. Update the static `data-whatsapp` link URLs in `index.html` as well, so the no-JavaScript fallback agrees. Use country-code digits only, without a plus sign. Keep displayed phone numbers, `tel:` links, and JSON-LD consistent.
 - **Instagram and map:** update `CONFIG.instagramUrl` / `CONFIG.mapsQuery` and the corresponding static HTML fallbacks. Update JSON-LD `sameAs` when Instagram changes.
