@@ -89,7 +89,8 @@ img { display: block; width: 100%; height: 100%; object-fit: contain; }
 
 .products { padding-block: 120px 100px; display: flex; flex-direction: column; gap: 56px; }
 .products .section-heading { display: grid; grid-template-columns: minmax(0, 2.5fr) minmax(0, 1fr); gap: 48px; }
-.products h2 { font-size: clamp(38px, 4.167vw, 60px); line-height: 1.05; }
+.products h2 { font-size: clamp(38px, 3.889vw, 56px); line-height: 1.05; }
+.products h2 span { display: block; }
 .product-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; }
 .product-card { position: relative; overflow: hidden; display: flex; flex-direction: column; background: var(--card); border: var(--border); }
 .product-image { position: relative; height: 250px; flex: none; overflow: hidden; }
