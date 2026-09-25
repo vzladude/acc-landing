@@ -1,5 +1,28 @@
 # Implementation notes
 
+## AWS production migration — September 25, 2026
+
+Published the approved landing at **https://inversionesacc.com/** in the user's personal AWS account, following the IHM infrastructure pattern. Work was committed in deployment sections on `codex/aws-production`.
+
+- Created CloudFormation stack `acc-landing-production` in `us-east-1`: private encrypted S3, signed OAC origin access, distribution-scoped bucket policy, dedicated WAF rate rule, managed security/cache policies, and a canonical redirect function. The distribution is `E29C4VUSCEAMTM`; no IHM resources were modified.
+- ACM issued the certificate for root and www using DNS validation in the existing Route 53 hosted zone. The initial stack kept website DNS inactive. After successful preflight TLS/content checks, a separate reviewed change set added only root/www A and AAAA aliases. The stack is `UPDATE_COMPLETE`, CloudFront is `Deployed`, and the certificate is `ISSUED`.
+- The dedicated CloudFront Free subscription is `ACTIVE`, including the WAF and Route 53 hosted zone. It is managed outside CloudFormation. Deployment identifiers and status are in `deploy/aws-production.json`; lifecycle and cost details are in `deploy/AWS_DEPLOYMENT.md`.
+- Updated canonical, Open Graph, Twitter image URLs, JSON-LD, robots and sitemap to the official HTTPS root. HTTP, www, `/index.html`, and the temporary CloudFront host lead to the canonical site. Redirect checks preserve URL-encoded and repeated query parameters.
+- Replaced direct repository syncing with a runtime-only Python packaging step, account/bucket/origin checks and `--dry-run`. Images, JavaScript and favicon have SHA-256-derived filenames; original image bytes remain intact. All inline SVG logo and CSS background references resolve. The small stylesheet is embedded in production HTML to remove a render-blocking round trip; the editable source stays in `css/styles.css`. The final package has 23 files / 755,537 bytes. Assets upload first, HTML last, prior assets remain available, and CloudFront is invalidated after publishing.
+- The GitHub Pages workflow now packages only `deploy/pages-redirect.html`: a noindex relocation page with a direct link, browser redirect preserving query/fragment, and no-JavaScript fallback. GitHub remains the source repository; AWS uploads are explicit through `deploy.sh`.
+
+Verification:
+
+- Five Python tests pass, covering complete release assets and unchanged image bytes, consistent indexing/social URLs, reproducibility, invalid release rejection, and five missing/wrong AWS target cases. Four Node tests pass for canonical pass-through, alternate-host redirects, index normalization, and encoded/repeated query preservation.
+- HTML validation passes for source, production HTML and the relocation notice; JavaScript and shell syntax and `git diff --check` pass.
+- Pre-DNS verification checked all 24 initial files over normally validated TLS using `curl --connect-to`. After the stylesheet optimization, all 23 final public files returned HTTP 200 with matching SHA-256 hashes and expected cache headers. Source/infrastructure URLs and direct S3 object access were denied. All four S3 public-access blocks remain enabled.
+- Browser checks at 320, 390, 768, 1024, 1440 and 1920px show no horizontal overflow. Desktop/mobile visual review verifies the real logo, hero, products, backgrounds and contact/map. All 14 HTML images loaded, all nine WhatsApp links retain the expected phone/message, and the email remains correct. The mobile menu opens with Enter, traps Tab/Shift+Tab, restores focus on Escape, and closes/focuses the destination after keyboard selection. Browser console errors: none.
+- Final mobile Lighthouse 13.5.0 / Chrome 154.0.8037.57 on the public AWS URL: **99 Performance, 100 Accessibility, 100 Best Practices, 100 SEO**. FCP 0.9s, LCP 1.5s, CLS 0.054, TBT 40ms. Earlier diagnostic runs used the old installed Chrome 139 and are retained separately; the final audit used a freshly installed official stable native browser.
+
+Evidence (ignored local files): `.qa/preflight-verification.json`, `.qa/production-verification.json`, `.qa/responsive-production.json`, `.qa/lighthouse-production-chrome154.report.html` / `.json`, and `.qa/production-desktop.png` / `production-mobile.png`. Deployment/recovery instructions are in `deploy/AWS_DEPLOYMENT.md`.
+
+This migration fulfills hosting and custom-domain deployment. Form delivery, GA4 and Search Console remain separate pending integrations; no IHM analytics ID was reused. `SPEC.md`, `design/reference.html`, copy, original images and visual design were preserved. The approved migration's asset versioning and release packaging supersede the original deployment script's direct `--delete` sync and source-file caching behavior.
+
 ## Phase 1 — identity and positioning, September 23, 2026
 
 Implemented the user's approved first phase on `codex/phase-1-identity-copy`, with separate commits for the logo, hero/metadata, product heading, brand wording, five benefits, and contact copy.
