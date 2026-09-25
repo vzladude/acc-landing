@@ -1,15 +1,10 @@
-name: Deploy to GitHub Pages
+name: Publish GitHub Pages relocation notice
 
 on:
   push:
     branches: [main]
     paths:
-      - index.html
-      - css/**
-      - js/**
-      - img/**
-      - favicon.svg
-      - robots.txt
+      - deploy/pages-redirect.html
       - .github/workflows/pages.yml
   workflow_dispatch:
 
@@ -24,7 +19,7 @@ concurrency:
 
 jobs:
   deploy:
-    name: Publish static site
+    name: Publish relocation notice
     runs-on: ubuntu-latest
     timeout-minutes: 10
     environment:
@@ -39,13 +34,12 @@ jobs:
       - name: Configure Pages
         uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
 
-      - name: Prepare static files
+      - name: Prepare relocation notice
         shell: bash
         run: |
           set -euo pipefail
           mkdir -p "$RUNNER_TEMP/acc-pages"
-          cp index.html favicon.svg robots.txt "$RUNNER_TEMP/acc-pages/"
-          cp -R css js img "$RUNNER_TEMP/acc-pages/"
+          cp deploy/pages-redirect.html "$RUNNER_TEMP/acc-pages/index.html"
 
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
