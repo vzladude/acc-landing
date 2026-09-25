@@ -36,5 +36,8 @@
   },
   "LighthouseVersion": "13.5.0",
   "AuditBrowser": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.8037.57 Safari/537.36",
-  "LighthouseVerifiedAt": "2026-09-25T19:25:34.870Z"
+  "LighthouseVerifiedAt": "2026-09-25T19:25:34.870Z",
+  "PagesRelocationStatus": "PUBLISHED_AND_BROWSER_VERIFIED",
+  "PagesRelocationRun": "https://github.com/vzladude/acc-landing/actions/runs/36179801113",
+  "PagesRelocationHead": "1360c670de09e73b9b5293c504e716fa4f0f9913"
 }

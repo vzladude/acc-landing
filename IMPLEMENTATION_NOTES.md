@@ -21,6 +21,8 @@ Verification:
 
 Evidence (ignored local files): `.qa/preflight-verification.json`, `.qa/production-verification.json`, `.qa/responsive-production.json`, `.qa/lighthouse-production-chrome154.report.html` / `.json`, and `.qa/production-desktop.png` / `production-mobile.png`. Deployment/recovery instructions are in `deploy/AWS_DEPLOYMENT.md`.
 
+Publication: changes were fast-forwarded to `main` and pushed to `vzladude/acc-landing`. [Pages relocation run 36179801113](https://github.com/vzladude/acc-landing/actions/runs/36179801113) succeeded for commit `1360c670de09e73b9b5293c504e716fa4f0f9913`. The published notice matches its repository bytes. A real browser navigation from the old Pages URL reached the official AWS domain with both the test query string and `#productos` fragment preserved.
+
 This migration fulfills hosting and custom-domain deployment. Form delivery, GA4 and Search Console remain separate pending integrations; no IHM analytics ID was reused. `SPEC.md`, `design/reference.html`, copy, original images and visual design were preserved. The approved migration's asset versioning and release packaging supersede the original deployment script's direct `--delete` sync and source-file caching behavior.
 
 ## Phase 1 — identity and positioning, September 23, 2026
