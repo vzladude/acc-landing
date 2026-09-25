@@ -81,6 +81,15 @@ def build():
                 if not target.is_relative_to(ROOT) or target.relative_to(ROOT).as_posix() not in assets:
                     raise ValueError(f'Missing CSS asset: {raw}')
 
+    # The small stylesheet belongs in the first response: this avoids a blocking
+    # network round trip on mobile while preserving the editable source CSS.
+    stylesheet = names['css/styles.css']
+    marker = f'<link rel="stylesheet" href="./{stylesheet}">'
+    if page.count(marker) != 1:
+        raise ValueError('Expected one local stylesheet link.')
+    css = assets.pop(stylesheet).decode().replace('url("../', 'url("./')
+    page = page.replace(marker, '<style>\n' + css + '\n</style>')
+
     assets['index.html'] = page.encode()
     assets['robots.txt'] = (ROOT / 'robots.txt').read_bytes()
     assets['sitemap.xml'] = (ROOT / 'sitemap.xml').read_bytes()

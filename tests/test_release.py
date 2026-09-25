@@ -36,9 +36,10 @@ class ReleaseTests(unittest.TestCase):
                 relative = original.relative_to(ROOT).as_posix()
                 renamed = builder.fingerprint(relative, original.read_bytes())
                 self.assertEqual((self.destination / renamed).read_bytes(), original.read_bytes())
-        css = next((self.destination / 'css').glob('styles.*.css')).read_text()
+        css = re.search(r'<style>\n(.*?)\n</style>', page, re.S).group(1)
+        self.assertNotIn('href="./css/', page)
         for raw in re.findall(r'url\("([^"]+)"\)', css):
-            self.assertTrue((self.destination / 'css' / raw).is_file(), raw)
+            self.assertTrue((self.destination / raw).is_file(), raw)
         self.assertFalse(list(self.destination.rglob('*.md')))
         self.assertFalse((self.destination / 'deploy').exists())
         self.assertFalse((self.destination / 'release-manifest.json').exists())
